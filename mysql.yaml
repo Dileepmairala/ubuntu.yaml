@@ -2,7 +2,6 @@
   - name: Playbook
     hosts: 10.10.5.81
     become: yes
-    become_user: sudo
     tasks:
       - name: ensure apache is at the latest version
         yum:
