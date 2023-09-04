@@ -1,0 +1,16 @@
+---
+- name: Install MySQL on Ubuntu
+  hosts: 10.10.5.81
+  become: yes
+  tasks:
+    # Your tasks will go here
+- name: Install MySQL Server
+  apt:
+    name: mysql-server
+    state: present
+
+- name: Start MySQL Service
+  service:
+    name: mysql
+    state: started
+    enabled: yes
