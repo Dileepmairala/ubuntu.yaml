@@ -1,6 +1,6 @@
 ---
 - name: Install Prometheus on Ubuntu
-  hosts: 10.10.5.82
+  hosts: 172.16.0.246
   become: true # Use 'become' to escalate privileges (sudo)
 
   tasks:
