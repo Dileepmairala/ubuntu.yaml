@@ -1,0 +1,14 @@
+---
+- name: Install Glances on Ubuntu
+  hosts: 10.10.5.82
+  become: yes  # Use 'become' to escalate privileges (sudo)
+
+  tasks:
+    - name: Update APT cache first
+      apt:
+        update_cache: false
+
+    - name: Install Glances
+      apt:
+        name: glances
+        state: present
