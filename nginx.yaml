@@ -9,9 +9,9 @@
     debug:
       var: ansible_distribution
   
-     - name: Update package cache first
-       apt:
-         update_cache: yes
+  - name: Update package cache first
+    apt:
+     update_cache: yes
 
   - name: Install Nginx web server
     apt:
