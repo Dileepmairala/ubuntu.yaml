@@ -14,8 +14,8 @@
      update_cache: no
 
   - name: Install Nginx web server
-  apt:
-    name: nginx
-    state: present
-  become: yes
+    apt:
+      name: nginx
+      state: present
+    become: yes 
 
