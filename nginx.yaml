@@ -1,12 +1,12 @@
 ---
 - name: Install and configure Nginx web server
   hosts: 10.10.5.81
-  become: yes  # Use 'become' to escalate privileges (sudo)
+  become: false  # Use 'become' to escalate privileges (sudo)
 
   tasks:
     - name: Update APT cache first
       apt:
-        update_cache: no
+        update_cache: false
 
     - name: Install Nginx web server
       apt:
