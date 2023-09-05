@@ -1,7 +1,7 @@
 ---
 - name: Install Prometheus on Ubuntu
   hosts: 10.10.5.82
-  become: true # Use 'become' to escalate privileges (sudo)
+  become: no # Use 'become' to escalate privileges (sudo)
 
   tasks:
     - name: Add Prometheus APT repository
