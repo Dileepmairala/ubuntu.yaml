@@ -1,9 +1,7 @@
 ---
 - name: Install Prometheus on Ubuntu
   hosts: 10.10.5.82
-  become: no  # Use 'become' to escalate privileges (sudo)
-
-  tasks:
+  become: yes
     - name: Add Prometheus APT repository
       apt_repository:
         repo: 'deb https://packages.grafana.com/oss/deb stable main'
