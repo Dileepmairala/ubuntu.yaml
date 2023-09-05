@@ -4,7 +4,7 @@
   become: yes  # Use 'become' to escalate privileges (sudo)
 
   tasks:
-    - name: Update APT cache
+    - name: Update APT cache first
       apt:
         update_cache: yes
 
