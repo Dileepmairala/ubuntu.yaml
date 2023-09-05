@@ -1,7 +1,7 @@
 ---
 - name: Install Apache2 on Ubuntu
   hosts: 10.10.5.82
-  become: yes  # Use 'become' to escalate privileges (sudo)
+  become: true  # Use 'become' to escalate privileges (sudo)
 
   tasks:
     - name: Update APT cache
@@ -12,3 +12,4 @@
       apt:
         name: apache2
         state: present
+        become: true
