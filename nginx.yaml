@@ -17,5 +17,6 @@
     apt:
       name: nginx
       state: present
+      mode: 0755
     
 
