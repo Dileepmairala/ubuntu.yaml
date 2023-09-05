@@ -1,12 +1,13 @@
 ---
 - name: Install Apache2 on Ubuntu
   hosts: 10.10.5.82
-  become: true  # Use 'become' to escalate privileges sudo
+  become: true    # This allows the playbook to run with sudo privileges
+
       tasks:
         - name: Update apt cache
           apt:
-            update_cache: yes
-          become: true
+            update_cache: no
+          become: false
 
         - name: Install Apache2
           apt:
