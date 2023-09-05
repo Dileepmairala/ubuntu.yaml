@@ -1,6 +1,7 @@
 ---
 - name: Install and configure Nginx web server
   hosts: 10.10.5.81
+  sudo: yes
   become: no
   gather_facts: yes
 
