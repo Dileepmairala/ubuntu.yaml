@@ -1,6 +1,6 @@
 ---
 - name: Install Applications on Ubuntu
-  hosts: 10.10.5.81
+  hosts: 10.10.5.82
   become: true
 
   tasks:
@@ -8,13 +8,3 @@
     apt:
       name: mysql-client
       state: present
-
-  - name: Install PHP and required extensions
-    apt:
-      name: "{{ item }}"
-      state: present
-    with_items:
-      - php-fpm
-      - php-mysql
-      - php-curl
-      - php-gd
